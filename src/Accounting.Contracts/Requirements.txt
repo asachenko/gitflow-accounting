@@ -1,0 +1,22 @@
+﻿1. A login with name and pin code.
+2. Support for different account types with possibility for expansion.  For now, Current and Savings accounts are the only requirement.
+3. Able to create, edit and delete accounts.
+4. Ability to debit, credit into accounts.
+5. Ability to transfer funds from one account to another.
+6. Ability to freeze an account so that no transactions can take place on the account.
+7. Ability to add interest to an account, with rate set per account type (1.5% for Current and 3% Savings).
+8. There could be potential for alternative application types i.e. web, mobile, etc in the future so code reusability would be beneficial.
+9. Written in C# using Visual Studio.
+10. UI and data storage are up to you.
+
+Classes Accounting.Service.Services.AccountingAdministrationService and Accounting.Service.Services.AccountingService contain all use cases from requirements 3, 4, 5, 7.
+
+Implementation of business logic is located in classes Accounting.Core.Managers.AccountingAdministrationManager and Accounting.Core.Managers.AccountingManager.
+
+I use patterns the repository and unit of work patterns in the application for creation an abstraction layer between the data access layer and the business logic.
+Implementing these patterns can help insulate the application from changes in the data store and can facilitate automated unit testing.
+
+I chose a decimal type to represent money in C# and in data storage in SQL Server. The decimal type has more precision and a smaller range, which makes it appropriate for financial and monetary calculations.
+
+In operation debit, credit and etc. I use an isolation level RepeatableRead, because it guarantees that any data read cannot change, if the transaction reads 
+the same data again.

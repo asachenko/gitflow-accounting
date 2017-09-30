@@ -1,0 +1,7 @@
+bin
+obj
+/src/*.user
+/src/.vs/Accounting/v14/*.suo
+/src/packages
+/src/TestResults
+/src/.vs
