@@ -2,6 +2,6 @@
 {
     public interface ISignInManager
     {
-        SignInStatus Login(string name, string pin);
+        SignInStatus Login(string name, string password);
     }
 }

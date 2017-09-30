@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Accounting.Contracts.Security;
+﻿using Accounting.Contracts.Security;
+using System.Collections.Generic;
 
 namespace Accounting.Core.Security
 {
@@ -12,9 +12,9 @@ namespace Accounting.Core.Security
             _users = users;
         }
 
-        public SignInStatus Login(string name, string pin)
+        public SignInStatus Login(string name, string password)
         {
-            if (_users.ContainsKey(name) && _users[name] == pin)
+            if (_users.ContainsKey(name) && _users[name] == password)
             {
                 return SignInStatus.Success;
             }
