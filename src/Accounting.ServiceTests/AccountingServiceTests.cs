@@ -19,7 +19,7 @@ namespace Accounting.ServiceTests
 
         private static readonly IDictionary<AccountType, decimal> Rates = new Dictionary<AccountType, decimal>
             {
-                {AccountType.Current, 0.015m},
+                {AccountType.Current, 0.02m},
                 {AccountType.Savings, 0.03m}
 
             };

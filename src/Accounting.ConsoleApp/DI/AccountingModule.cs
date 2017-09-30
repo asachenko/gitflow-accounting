@@ -33,7 +33,7 @@ namespace Accounting.ConsoleApp.DI
                         new AccountingManager(ctx.Inject<IAccountUnitOfWorkFactory>(),
                             new Dictionary<AccountType, decimal>
                             {
-                                {AccountType.Current, 0.015m},
+                                {AccountType.Current, 0.02m},
                                 {AccountType.Savings, 0.03m}
                             }))
                 .InSingletonScope();
